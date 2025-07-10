@@ -1,1 +1,0 @@
-# Trading-Journal_gsheets
