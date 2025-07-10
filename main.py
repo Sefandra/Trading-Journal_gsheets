@@ -16,6 +16,9 @@ client = gspread.authorize(credentials)
 # Replace with your own Google Sheet ID and Sheet name
 SHEET_ID = "1u4DxV-vsxDvEDY9nerSfERd4piskzuD86xf6d4mJPFU"
 SHEET_NAME = "Jurnal Trading"
+SHEET_NAME = "Ringkasan"
+SHEET_NAME = "Analisis Strategi & Emosi"
+SHEET_NAME = "Dashboard"
 
 @st.cache_data(ttl=300)
 def load_data():
