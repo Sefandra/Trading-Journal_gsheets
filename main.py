@@ -6,7 +6,10 @@ from datetime import date
 
 # Konfigurasi scope dan autentikasi
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-credentials = ServiceAccountCredentials.from_json_keyfile_name("google_credentials.json", scope)
+import json
+
+creds_dict = json.loads(st.secrets["GOOGLE_CREDENTIALS"])
+credentials = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(credentials)
 
 # Buka sheet
